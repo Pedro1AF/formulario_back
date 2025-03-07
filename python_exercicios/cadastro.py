@@ -1,18 +1,28 @@
-print ("Seja Bem-Vindos")
+from datetime import date
 
-print ("Voce pode cadatrar quantas variaveis quiser.digite 'sair' para finalizar")
+variavel = {}
+
+print("Seja Bem-Vindos")
+
+print("Você pode cadastrar quantas variáveis quiser. Digite 'sair' para finalizar.")
 
 while True:
-    nome = input("digite o nome da variavel:")
-   
-    if nome.lower() == 'sair':
+    
+    primeiro_campo = input("Digite o nome da variável: ")
+
+    if primeiro_campo.lower() == 'sair':
         break
-    valor = input(f"digite o valor para {nome}: ")
-   
-    variavel[nome] = valor
-       
-print("n/variaveis cadastradas:")
-for nome, valor in variavel.items():
-    print(f"{nome} = {valor}")
-           
+
+    valor = input(f"Digite o valor para {primeiro_campo}: ")
+    
+    data = date.today()
+
+    variavel[primeiro_campo] = {"valor": valor, "atual": data}
+
+print("\nVariáveis cadastradas:")
+
+for nome, dados in variavel.items():
+    
+    print(f"{dados['atual']} - {nome} = {dados['valor']}")
+
 print("\nFim do programa! Obrigado por utilizar.")
