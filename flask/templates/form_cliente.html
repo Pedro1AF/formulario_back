@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <!--<link rel="stylesheet" href="{{ url_for('static', filename='css/form_cliente.css') }}">> -->
+
+</head>
+
+<body>
+    <div class="login-container">
+
+        <h1>Login</h1>
+
+        <p>Entre com seus dados para acessar sua conta.</p>
+
+        <form action="/login" method="post">
+
+            <div class="mb-3">
+                <label class="form-label">Nome</label>
+                <input type="text" placeholder="Nome" class="form-control" required>
+            </div> 
+
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="text" placeholder="Email" class="form-control" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Adicionar usuario</button>
+
+        </form>
+
+    </div>
+</body>
+</html>
